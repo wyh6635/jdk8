@@ -27,5 +27,14 @@ public class LocalDateDemo {
         System.out.println("将日期中的月改成1月: " + date1.withMonth(1));
         System.out.println("判断是否润月: " + today.isLeapYear());
 
+        System.out.println("程序员日是一年中的256天:" + LocalDate.of(2017, 1, 1).plusDays(255));
+
+        System.out.println();
+
+        //小心
+        System.out.println("输出：" + LocalDate.of(2016, 1, 31).plusMonths(1));
+        System.out.println("输出：" + LocalDate.of(2016, 3, 31).minusMonths(1));
+
+        System.out.println("返回今天是星期几：" + LocalDate.now().getDayOfWeek().getValue());
     }
 }
