@@ -2,6 +2,7 @@ package com.awangyh.jdk8.datedemo;
 
 import java.time.LocalDate;
 import java.time.Month;
+import java.time.chrono.IsoChronology;
 
 /**
  * Created by wangyanhui on 2017/3/8.
@@ -36,5 +37,16 @@ public class LocalDateDemo {
         System.out.println("输出：" + LocalDate.of(2016, 3, 31).minusMonths(1));
 
         System.out.println("返回今天是星期几：" + LocalDate.now().getDayOfWeek().getValue());
+
+        System.out.println("输出：" + LocalDate.of(2000, 2, 29).plusYears(1));
+        System.out.println("输出：" + LocalDate.of(2000, 2, 29).plusYears(4));
+        System.out.println("输出：" + LocalDate.of(2000, 2, 29).plusYears(5));
+
+        if ( IsoChronology.INSTANCE.isLeapYear(2000)) {
+            System.out.println("润年");
+        } else {
+            System.out.println("非润年");
+        }
+
     }
 }
